@@ -1,2 +1,2 @@
-# calk.github.io
+# https://temaalex.github.io/culkulator/
  
