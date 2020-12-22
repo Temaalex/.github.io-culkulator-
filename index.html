@@ -1,101 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
- <head>
-	  <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <title>Calculators</title>  
-	  <link rel="icon" href="img/icon.ico">
-	  <link href="css/styles.css" rel="stylesheet">
-	  <link rel="stylesheet" href="css/normalize.css">
- </head>
- <body>
-	<herader class="header">
-		<div class="spring">В разработке</div>
-		<div class="spring">КАЛЬКУЛЯТОР </div>
-	</herader>
-	<main class="wrapper container">
-		<p class="title">РАСЧЕТ СКОРОСТИ ПОТОКА ВОЗДУХА В ТРУБЕ</p>
-		<div class="wrapper_content">
-			<div class="tabs">
-				<p class="text_button">Расчитать скорость</p>
-				<p class="text_button">Расчитать расход</p>
-				<p class="text_button">Расчитать площадь сечения трубы</p>
-			</div>
-			<div class="content">
-				<div class="content__spead">
-					См. РД5.5584-89 <br>
-					Скорость воздуха в воздуховоде определяется по формуле:<br><br>
-					<div class="formula">
-							V=L/F*3600;<br>
-							Где:<br>
-							V - скорость воздуха в воздуховоде, м/с<sup class="text_height">2</sup>;<br>
-							L - объемный расход воздуха для вентиляции помещения, м<sup class="text_height">3</sup>/с (м<sup class="text_height">3</sup>/ч);<br>
-							F - площадь сечения воздуховода естественной вентиляции, м<sup class="text_height">2</sup>;<br>
-					</div><br>
-					РАСЧЕТ:<br><br>
-					
-					Введите расход воздуха "L":
-					<input class="consumption" type="text" placeholder="Введите в м³/ч "><br>
-						Выберете сечение трубы <br> для расчета площади сечения:
-						<button class="btn__square">Прямоугольное</button>
-						<button class="btn__circle">Круглое</button><br>
-						<p class="consumption__square"> 
-							Введите первую грань:  <input class="one_edge" type="text" placeholder="Введите в миллиметрах">
-						</p>
-						<p class="consumption__square">
-							Введите вторую грань:  <input class="two_edge" type="text" placeholder="Введите в миллиметрах">
-						</p>
-						<p class="consumption__circle">
-							Введите диаметр:  <input  class="one_circle"type="text" placeholder="Введите в миллиметрах">
-						</p>
-						<button class="btn_result">Расчитать</button><br><br>
-						Результат вычеслений: <span class="project-result-value"></span>
-				</div>
-				<div class="content__consumption">
-					См. РД5.5584-89 <br>
-					Объемный расход воздуха, необходимый для естественной <br>
-					вентиляции помещений вспомогательного назначения, <br>
-					расположенных на открытых палубах или имеющих выход<br>
-					 на них и грузовых трюмов определяется по формуле:<br><br>
-					<div class="formula">
-						L=F*V*3600;<br>
-						Где:<br>
-						V - скорость воздуха в воздуховоде, м/с<sup class="text_height">2</sup>;<br>
-						L - объемный расход воздуха для вентиляции помещения, м<sup class="text_height">3</sup>/с (м<sup class="text_height">3</sup>/ч);<br>
-						F - площадь сечения воздуховода естественной вентиляции, м<sup class="text_height">2</sup>;<br>
-					</div><br>
-					РАСЧЕТ:<br><br>
-					Введите скорость воздуха "V":
-					<input class="speed" type="text" placeholder="Введите в м/с² "><br>
-						Выберете сечение трубы <br> для расчета площади сечения:
-						<button class="speed__btn--square">Прямоугольное</button>
-						<button class="speed__btn--circle">Круглое</button><br>
-						<p class="speed__square"> 
-							Введите первую грань:  <input class="speed__one_edge" type="text" placeholder="Введите в миллиметрах">
-						</p>
-						<p class="speed__square">
-							Введите вторую грань:  <input class="speed__two_edge" type="text" placeholder="Введите в миллиметрах">
-						</p>
-						<p class="speed__circle">
-							Введите диаметр:  <input  class="speed_one_circle"type="text" placeholder="Введите в миллиметрах">
-						</p>
-						<button class="speed__btn_result">Расчитать</button><br><br>
-						Результат вычеслений: <span class="speed__project-result-value"></span>
-				</div>
-				<div class="content__square">
-					В разработке!<br>
-					Текст Текст Текст Текст Текст Текст Текст Текст Текст <br>
-					Текст Текст Текст Текст Текст<br>
-					Текст Текст Текст Текст Текст<br>
-					Текст Текст Текст <br>
-					Текст Текст Текст Текст Текст.<br><br>
-				</div>
-			</div>
-		</div>
-	</main>
-	<footer class="footer">
-		В разработке
-	</footer>
-	<script src="js/index.js"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор на JQ</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+</head>
+    <body>
+        <div class="wrapper">
+            <h2 class="title">Расчёт скорости потока воздуха в трубе:</h2><br>
+            
+            <!-- block 1 -->
+            <div class="wrapper_air">
+                <p class="air__text">Введите расход воздуха  m³/с (m³/ч):</p><br>
+                <input name="input" class="air_airtext" type="text" placeholder="Введите значение">
+            </div>
+            <div class="slider"></div><br> 
+            <!-- block 2 -->
+            <div id="group">
+                <div class="wrapper__group">
+                    <div class="wrapper__group--text">
+                        Прямоугольное сечение (mm): <br><br>
+                        Круглое сечение (mm): 
+                    </div>
+                    <div class="wrapper__group--checkbox">
+                        <input type="checkbox" class="click_square"><br>
+                        <input type="checkbox" class="click_circle">
+                    </div>
+                </div>
+            </div>
+            <input name="input" class="square" type="text" placeholder="Введите значение"><br>
+            <input name="input" class="square" type="text" placeholder="Введите значение">
+            <input name="input" class="circle" type="text" placeholder="Введите значение">
+            <br>
+            <span class="answer__text">Ответ:</span>
+            <br><br>
+            <!-- block 3 -->
+                <p class="btn_hello_text">Справочная информация!</p>
+                <p class="hello_text">
+                    Текст Текст Текст Текст Текст Текст <br>
+                    Текст Текст Текст Текст Текст Текст <br>
+                    Текст Текст Текст Текст Текст Текст <br>
+                    Текст Текст Текст Текст Текст Текст <br>                
+                </p>
+  
+
+        </div>
+        <!-- scripts -->
+        <script src="JS/jquery-3.5.1min.js"></script>
+        <script type="text/javascript" src="JS/jquery-ui.js"></script>
+        <link type="text/css" href="CSS/jquery-ui.css" rel="stylesheet" />
+        <script src="JS/script.jquery.js"></script>
+        <script src="JS/script.js"></script>
+    </body>
 </html>
