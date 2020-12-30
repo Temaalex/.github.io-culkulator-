@@ -31,28 +31,20 @@ $(function(){
             $(".answer__text").val(temp).text("Ответ: V = " + temp.toFixed(2) + " м/с.");
         }
         //---------------------------Продолжить тут--------------
-        if ($(".air_airtext") != Number){
-            $(".circle").css('background-color','red');
-        } else {
-            $(".air_airtext").css('background-color','red');
+        if ($('input.circle').value === ''){
+            $(".circle").css('background-color','red'); 
+        } 
+        if (Number($('input.circle').val()) != Number){
+            $(".air_airtext").css('background-color','red'); 
         }
-        if($(".circle").typeof == "undefined"){
-            $(".circle").css('background-color','white');
+        if (Number ($('.air_airtext').val()) != Number && Number($('input.circle').val()) != Number){
+            $(".air_airtext").css('background-color','white');  
         }
-        // $(".air_airtext").on('input', function(){
-        //     if($(".circle") != Number){
-        //         $(".circle").css('background-color','red');
-        //     }
-        // })
-        // $(".circle").on('input', function(){
-        //     $(".circle").css('background-color','white');
-        // })
-        //for (let i = 0; $("input[name=input]").length < i; i++){
-            // if($(("input[name=input]")[1]) != Number){
-            //     $(("input[name=input]")[1]).css('background-color','red');
-            // }
-        //}
-        console.log($(".circle").typeof)
+        if (Number ($('.air_airtext').val()) == Number && Number($('input.circle').val()) == Number){
+            $(".air_airtext").css('background-color','white');
+        }
+        
+        console.log($(".air_airtext").val().typeof)
 
     }
     let resultSquare = function(){
