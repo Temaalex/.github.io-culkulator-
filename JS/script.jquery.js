@@ -1,6 +1,36 @@
 'use strict';
 
 $(function(){
+    //проверка-------------------------------------------
+    $(".air_airtext").on('input', function(){
+        if(Number($('.air_airtext').val())){
+        $(".air_airtext").css('background-color','white');
+        } else {
+        $(".air_airtext").css('background-color','red');
+        }
+        });
+        $(".circle").on('input', function(){
+        if(Number($('.circle').val())){
+        $(".circle").css('background-color','white');
+        } else {
+        $(".circle").css('background-color','red');
+        }
+        });
+        $("input#square1").on('input', function(){
+        if(Number($('input#square1').val())){
+        $("input#square1").css('background-color','white');
+        } else {
+        $("input#square1").css('background-color','red');
+        }
+        });
+        
+        $("input#square2").on('input', function(){
+        if(Number($('input#square2').val())){
+        $("input#square2").css('background-color','white');
+        } else {
+        $("input#square2").css('background-color','red');
+        }
+        });
     /*block 1 and 2 (checkbox)----------------------------------------------------------------------------------------------------*/
     $('#group input:checkbox').click(function(){
         if ($(this).is(':checked')) {
@@ -19,7 +49,18 @@ $(function(){
         $('.circle').hide(100);
         };
     });
-  
+    //Смена расчета при смене чекбокса-------------------------------------------------------------------------
+    $('#group input:checkbox').click(function(){
+        if ($(this).is(':checked')) {
+            $('#group input:checkbox').not(this).prop('checked', false);
+        };
+        if($('.click_square').is(':checked')){
+            resultSquare()
+        }
+        if($('.click_circle').is(':checked')){
+            resultCircle()     
+        } 
+    });
     // Расчеты и проверки-----------------------------------------------------------------------------------------------------------
     let resultCircle = function(){
         if(Number ($('.air_airtext').val()) && Number ($('.circle').val())){
@@ -30,22 +71,6 @@ $(function(){
             let temp = 0;
             $(".answer__text").val(temp).text("Ответ: V = " + temp.toFixed(2) + " м/с.");
         }
-        //---------------------------Продолжить тут--------------
-        if ($('input.circle').value === ''){
-            $(".circle").css('background-color','red'); 
-        } 
-        if (Number($('input.circle').val()) != Number){
-            $(".air_airtext").css('background-color','red'); 
-        }
-        if (Number ($('.air_airtext').val()) != Number && Number($('input.circle').val()) != Number){
-            $(".air_airtext").css('background-color','white');  
-        }
-        if (Number ($('.air_airtext').val()) == Number && Number($('input.circle').val()) == Number){
-            $(".air_airtext").css('background-color','white');
-        }
-        
-        console.log($(".air_airtext").val().typeof)
-
     }
     let resultSquare = function(){
         if(Number($('.air_airtext').val()) && Number($('input#square1').val()) && Number($('input#square2').val())){
@@ -57,8 +82,6 @@ $(function(){
             $(".answer__text").val(temp).text("Ответ: V = " + temp.toFixed(2) + " м/с.");
         }
     }
-
-    
 
     //Вывод результатов----------------------------------------------------------------------------------------------------
     $(".click_circle").on('click', function(){
