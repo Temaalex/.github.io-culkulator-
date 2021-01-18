@@ -61,9 +61,18 @@
 .square{
     display: none;
 }
+.text_square{
+    display: none;
+    float: left;
+    margin-top: 5px;
+    }
 .circle{
     display: none;
 }
+.text_circle{
+    display: none;
+    float: left;
+    }
 .square__style{
     border: 2px solid black;
     padding: 5px;

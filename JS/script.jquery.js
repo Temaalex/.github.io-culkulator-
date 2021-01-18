@@ -37,18 +37,22 @@ $(function(){
         };
         if($('.click_square').is(':checked')){
             $('.square').show(100);
+            $('.text_square').show(100);
             $('.square').addClass("square__style");
         } else {
             $('.square').hide(100);
+            $('.text_square').hide(100);
         };
             if($('.click_circle').is(':checked')){
             $('.circle').show(100);
+            $('.text_circle').show(100);
             $('.circle').addClass("circle__style");
         } else {
-        $('.circle').hide(100);
+            $('.circle').hide(100);
+            $('.text_circle').hide(100);
         };
     });
-    //Смена расчета при смене чекбокса-------------------------------------------------------------------------
+    // Смена расчета при смене чекбокса-------------------------------------------------------------------------
     $('#group input:checkbox').click(function(){
         if ($(this).is(':checked')) {
             $('#group input:checkbox').not(this).prop('checked', false);
@@ -107,6 +111,7 @@ $(function(){
         
         slide : function(event, ui) {
             $(".air_airtext").val(ui.value);
+            $(".air_airtext").css('color','black');
                 if($(".click_circle").prop("checked")){
                     resultCircle();
                 } 
@@ -119,6 +124,7 @@ $(function(){
                 }   
         }
     });
+    
     $(".slider").css('border-bottom-right-radius','50px');
     $(".slider").css('border-bottom-left-radius','50px');
     $(".slider").css('border','none');

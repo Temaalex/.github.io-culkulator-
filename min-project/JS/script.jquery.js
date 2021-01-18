@@ -37,15 +37,19 @@ $(function(){
         };
         if($('.click_square').is(':checked')){
             $('.square').show(100);
+            
             $('.square').addClass("square__style");
         } else {
             $('.square').hide(100);
+            $('.text_square').hide(100);
         };
-            if($('.click_circle').is(':checked')){
+        if($('.click_circle').is(':checked')){
             $('.circle').show(100);
+            $('.text_circle').show(100);
             $('.circle').addClass("circle__style");
         } else {
-        $('.circle').hide(100);
+            $('.circle').hide(100);
+            $('.text_circle').hide(100);
         };
     });
     //Смена расчета при смене чекбокса-------------------------------------------------------------------------
