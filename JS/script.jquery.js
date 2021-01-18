@@ -13,21 +13,21 @@ $(function(){
         if(Number($('.circle').val()) || $('.circle').val() == ""){
             $(".circle").css('border','solid 2px black');
         } else {
-            $(".circle").css('border','solid 2px red');
+            $(".circle").css('border','solid 4px red');
         }
     });
     $("input#square1").on('input', function(){
         if(Number($('input#square1').val()) || $('input#square1').val() === ""){
             $("input#square1").css('border','solid 2px black');
         } else {
-            $("input#square1").css('border','solid 2px red');
+            $("input#square1").css('border','solid 4px red');
         }
     });
     $("input#square2").on('input', function(){
         if(Number($('input#square2').val()) || $('input#square2').val() === ""){
             $("input#square2").css('border','solid 2px black');
         } else {
-            $("input#square2").css('border','solid 2px red');
+            $("input#square2").css('border','solid 4px red');
         }
     });
     /*block 1 and 2 (checkbox)----------------------------------------------------------------------------------------------------*/
