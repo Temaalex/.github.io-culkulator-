@@ -13,21 +13,21 @@ $(function(){
         if(Number($('.circle').val()) || $('.circle').val() == ""){
             $(".circle").css('border','solid 2px black');
         } else {
-            $(".circle").css('border','solid 2px red');
+            $(".circle").css('border','solid 4px red');
         }
     });
     $("input#square1").on('input', function(){
         if(Number($('input#square1').val()) || $('input#square1').val() === ""){
             $("input#square1").css('border','solid 2px black');
         } else {
-            $("input#square1").css('border','solid 2px red');
+            $("input#square1").css('border','solid 4px red');
         }
     });
     $("input#square2").on('input', function(){
         if(Number($('input#square2').val()) || $('input#square2').val() === ""){
             $("input#square2").css('border','solid 2px black');
         } else {
-            $("input#square2").css('border','solid 2px red');
+            $("input#square2").css('border','solid 4px red');
         }
     });
     /*block 1 and 2 (checkbox)----------------------------------------------------------------------------------------------------*/
@@ -37,13 +37,13 @@ $(function(){
         };
         if($('.click_square').is(':checked')){
             $('.square').show(100);
-            
+            $('.text_square').show(100);
             $('.square').addClass("square__style");
         } else {
             $('.square').hide(100);
             $('.text_square').hide(100);
         };
-        if($('.click_circle').is(':checked')){
+            if($('.click_circle').is(':checked')){
             $('.circle').show(100);
             $('.text_circle').show(100);
             $('.circle').addClass("circle__style");
@@ -52,7 +52,7 @@ $(function(){
             $('.text_circle').hide(100);
         };
     });
-    //Смена расчета при смене чекбокса-------------------------------------------------------------------------
+    // Смена расчета при смене чекбокса-------------------------------------------------------------------------
     $('#group input:checkbox').click(function(){
         if ($(this).is(':checked')) {
             $('#group input:checkbox').not(this).prop('checked', false);
@@ -111,6 +111,7 @@ $(function(){
         
         slide : function(event, ui) {
             $(".air_airtext").val(ui.value);
+            $(".air_airtext").css('color','black');
                 if($(".click_circle").prop("checked")){
                     resultCircle();
                 } 
@@ -123,6 +124,7 @@ $(function(){
                 }   
         }
     });
+    
     $(".slider").css('border-bottom-right-radius','50px');
     $(".slider").css('border-bottom-left-radius','50px');
     $(".slider").css('border','none');
