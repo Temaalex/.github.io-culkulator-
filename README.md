@@ -1,1 +1,1 @@
-https://temaalex.github.io/culkulator/
+https://temaalex.github.io/culkulator/views/index.ejs
